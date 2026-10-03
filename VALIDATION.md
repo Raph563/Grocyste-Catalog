@@ -11,6 +11,8 @@ La livraison du 3 octobre 2026 publie 5 098 fiches recettes et 690 produits. 5 0
 | Gestionnaire : désactivation, réactivation, désinstallation, réinstallation et rejeu | 5 passent ; neuf autres addons conservés |
 | Activation réelle après sauvegarde SQLite cohérente et contrôle d’intégrité | 10 contrôles passent |
 | Téléchargement anonyme des six assets publics de release | Tailles et SHA-256 conformes |
+| Installation du paquet depuis une release publique, cache vide et réseau sans accès Grocy | Signature et activation vérifiées |
+| CI publique Python 3.12 / Node 24, lancée manuellement | 15 tests passent ; construction du navigateur identique |
 | Index publics GitHub Pages et instance Grocyste | Accessibles sans connexion ; 5 098 recettes / 690 produits |
 
 L’activation réelle conserve les empreintes des douze tables métier et du schéma Grocy, les personnalisations, la configuration, le secret serveur et les sept identités de services suivies. Le chargeur et les routes Android n’ont pas été modifiés. Les reçus privés, sauvegardes et empreintes détaillées restent hors du dépôt.
