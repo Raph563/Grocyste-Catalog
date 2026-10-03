@@ -7,3 +7,5 @@ Les sources externes sont attribuées par fiche ; les prix sont anciens et à re
 Les fiches JSON téléchargées ne satisfont pas à elles seules le contrat SafeImport. Une future intégration d’import doit résoudre les produits/unités sur l’instance cible, produire une proposition relisible, recueillir son approbation et conserver une réconciliation après réponse perdue.
 
 La qualification passe : Node 24 (8), extraction wiki (7), navigateur public (14), intégration PHP Grocy et absence de capacité métier (4), cycle de vie (5). Le dixième addon est activé ; les douze tables métier, le schéma, les personnalisations, les fichiers de configuration et les sept identités de services suivies sont conservés.
+
+Le dépôt public, la release v1.0.0 et GitHub Pages sont disponibles. Les six assets sont récupérés anonymement et leurs empreintes concordent ; les deux index publics sont vérifiés. Le paquet publié est figé (SHA-256 dans VALIDATION.md). Les ajouts documentaires ultérieurs ne remplacent ni le tag ni le paquet.

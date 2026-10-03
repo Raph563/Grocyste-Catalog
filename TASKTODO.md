@@ -6,5 +6,5 @@
 - [x] Recherche, filtres, lecture, sous-recettes/familles et téléchargement JSON.
 - [x] Tests Node 24, référence des fiches et limites de réponses.
 - [x] Qualification navigateur et Grocy isolé.
-- [ ] Paquet signé, publication publique et accès anonyme vérifié.
+- [x] Paquet signé, publication publique et accès anonyme vérifié.
 - [x] Activation de l’addon et conservation des données de l’instance.
