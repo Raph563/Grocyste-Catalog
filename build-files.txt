@@ -73,3 +73,7 @@ scripts/wiki_text.py
 src/catalog.mjs
 src/ui.mjs
 test/catalog.test.mjs
+
+src/recipe-import.mjs
+dist/recipe-import.css
+

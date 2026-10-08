@@ -57,6 +57,7 @@ async function mount(host) {
       if(record.source_text){const original=element('details');original.append(element('summary','Texte source et attributions (mise en forme simplifiée)'),element('p',record.source_text));details.append(original);}
       const sources=element('p');if(record.source)sources.append(link('Source',record.source),' · ');if(record.source_revision)sources.append(link('Révision utilisée',record.source_revision),' · ');if(record.contributors)sources.append(link('Contributeurs',record.contributors),' · ');sources.append(link(record.license,record.license_url));details.append(sources);
       if(record.modifications)details.append(element('p',record.modifications));
+      if(record.kind==='recipe'){const add=element('button','Ajouter à Grocy','gr-import-primary');add.type='button';add.onclick=()=>publicRecipeImport(record.id,1);details.append(add);}
       details.append(download('Télécharger cette fiche JSON',record.id+'.json',{schema:'grocyste-public-record-v1',record}));
       details.focus();
     } catch(e) { if(ticket===request)details.replaceChildren(element('p',e.message)); }
@@ -72,7 +73,7 @@ async function mount(host) {
   const requested=data.entries.find(e=>e.id===location.hash.slice(1));if(requested)await open(requested);
 }
 function start(){
-  if(sdk){sdk.register({id:'public-catalog',name:'Grocyste — Catalogue public',version:'1.0.0'});const menu=document.querySelector('.dropdown-menu[aria-labelledby="topnav-settings-dropdown"], #topnav-settings-dropdown .dropdown-menu')||document.querySelector('a[href$="/stocksettings"]')?.closest('.dropdown-menu');const a=element('a','Grocyste — Catalogue public','dropdown-item');a.href=asset('index.html');menu?.append(a);return;}
+  if(sdk){sdk.register({id:'public-catalog',name:'Grocyste — Catalogue public',version:'1.0.2'});const menu=document.querySelector('.dropdown-menu[aria-labelledby="topnav-settings-dropdown"], #topnav-settings-dropdown .dropdown-menu')||document.querySelector('a[href$="/stocksettings"]')?.closest('.dropdown-menu');const a=element('a','Grocyste — Catalogue public','dropdown-item');a.href=asset('index.html');menu?.append(a);installRecipeImport(sdk);return;}
   const host=document.getElementById('catalog');if(host)mount(host).catch(e=>{host.append(element('p',e.message));});
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();

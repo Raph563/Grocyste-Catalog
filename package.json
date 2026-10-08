@@ -1,1 +1,14 @@
-{"name":"grocyste-public-catalog","version":"1.0.0","private":true,"type":"module","license":"GPL-3.0-or-later","scripts":{"build":"node scripts/build.mjs","test":"node --test test/*.test.mjs"},"engines":{"node":">=24 <25"}}
+{
+  "name": "grocyste-public-catalog",
+  "version": "1.0.2",
+  "private": true,
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  }
+}
