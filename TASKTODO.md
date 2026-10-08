@@ -19,3 +19,5 @@ CORE et Catalogue 1.0.2 : confirmation sous session Grocy, contrôle des capacit
 Validation : 184 tests Python dans Python 3.12/Linux, 8 tests Node 24 ; 81 tests ciblés incluant les nouveaux contrôles de permissions. Ajout, annulation et second clic vérifiés sur Grocy 4.7.1 vierge et clone isolé. Onze ensembles métier préservés durant les imports ; artefacts de laboratoire retirés. Mise à jour de production après sauvegardes SQLite intègres : douze tables métier, schéma, personnalisations et neuf autres addons conservés.
 
 Limite explicite : l’import crée une fiche recette. Les ingrédients sont dans sa préparation, sans création de produits ni association aux stocks ; aucun achat ni consommation. Les packs et l’import avec résolution complète des produits restent un lot séparé. Les comptes et contributions communautaires restent fermés pendant la qualification SMTP.
+
+Catalogue 1.0.4 : portions choisies visibles dans l’aperçu ; lien de résultat conforme à /recipe/{id} de Grocy 4.7.1. Aperçu et annulation vérifiés dans la session de production, sans import métier.

@@ -73,7 +73,7 @@ async function mount(host) {
   const requested=data.entries.find(e=>e.id===location.hash.slice(1));if(requested)await open(requested);
 }
 function start(){
-  if(sdk){sdk.register({id:'public-catalog',name:'Grocyste — Catalogue public',version:'1.0.2'});const menu=document.querySelector('.dropdown-menu[aria-labelledby="topnav-settings-dropdown"], #topnav-settings-dropdown .dropdown-menu')||document.querySelector('a[href$="/stocksettings"]')?.closest('.dropdown-menu');const a=element('a','Grocyste — Catalogue public','dropdown-item');a.href=asset('index.html');menu?.append(a);installRecipeImport(sdk);return;}
+  if(sdk){sdk.register({id:'public-catalog',name:'Grocyste — Catalogue public',version:'1.0.4'});const menu=document.querySelector('.dropdown-menu[aria-labelledby="topnav-settings-dropdown"], #topnav-settings-dropdown .dropdown-menu')||document.querySelector('a[href$="/stocksettings"]')?.closest('.dropdown-menu');const a=element('a','Grocyste — Catalogue public','dropdown-item');a.href=asset('index.html');menu?.append(a);installRecipeImport(sdk);return;}
   const host=document.getElementById('catalog');if(host)mount(host).catch(e=>{host.append(element('p',e.message));});
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();

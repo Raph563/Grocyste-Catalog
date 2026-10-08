@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "public-catalog",
   "name": "Grocyste — Catalogue public",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "repository": "Raph563/Grocyste-Catalog",
   "core": ">=1.0.2 <2.0.0",
   "grocy": [
